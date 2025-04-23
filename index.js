@@ -1,10 +1,16 @@
-const hambourger = document.querySelector("#hambourger");
-const menu = document.querySelector("#menu");
+const toggleBtn = document.querySelector("#toggle")
+const navList = document.querySelector("#list")
+let toggle = true
+navList.style.display = "none"
 
-hambourger.addEventListener("click", () =>{
+toggleBtn.addEventListener("click", function(){
 
-hambourger.classList.toggle("active");
-menu.classList.toggle("show");
+  toggle = !toggle
+  if (!toggle){
+   navList.style.display = "none"
+  }else{
+   navList.style.display = "block"
 
+  }
 
 })

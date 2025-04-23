@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="index.css">
+  <title>News homepage</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter">
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -24,22 +24,50 @@
 
   <!-- The header and nav-bar -->
   
-    <div class="max-w-7xl ml-[6rem] px-4 lg:px-8">
-      <div>
-      <header class="flex justify-between">
-        <img src="./assets/images/logo.svg" class="mt-[2rem]"/>
+    <div class="sm:w-screen bg-stone-200    md: ">
+      <header class=" flex justify-between">
+        <div class="ml-[15px]   md:ml-[5rem]">
+          <img src="./assets/images/logo.svg" class="mt-[2rem]"/>
+        </div>
+        
 
         <!-- Hamburger menu -->
 
-        <div  class="block hover:cursor-pointer mt-[2rem] mr-[9rem] fixed right-0  lg:hidden     md:hidden"  id="hambourger">
-          <span class="block w-[25px] h-[3px] my-[5px] mx-[auto] bg-black lg:hidden md:hidden"></span>
-          <span class="block w-[25px] h-[3px] my-[5px] mx-[auto] bg-black lg:hidden md:hidden"></span>
-          <span class="block w-[25px] h-[3px] my-[5px] mx-[auto] bg-black lg:hidden md:hidden"></span>
+        <div  class="block hover:cursor-pointer mt-[2rem] pr-4 fixed right-0     md:hidden">
+          <span id="toggle" class="fa fa-bars "></span>
         </div>
 
+        <!-- <div class="hambourger">
+          <span class="first-ham"></span>
+          <span class="second-ham"></span>
+          <span class="third-ham"></span>
+        </div> -->
 
 
-        <ul class="hidden  md:flex mt-[3rem] gap-[2rem] text-gray-500      lg:flex mt-[3rem] gap-[2rem] text-gray-500  mr-[8rem] text-[13px]"  id="menu">
+
+        <ul id="list" class="flex-roll md:flex mt-[3rem] gap-[2rem] text-gray-500 lg:flex mt-[3rem] gap-[2rem] text-gray-500  mr-[8rem] text-[13px]" >
+          <li class="hover:text-red-500 cursor-pointer">
+            Home
+          </li>
+
+          <li class="hover:text-red-500 cursor-pointer">
+            New
+          </li>
+
+          <li class="hover:text-red-500 cursor-pointer">
+            Popular
+          </li>
+
+          <li class="hover:text-red-500 cursor-pointer">
+            Trending
+          </li>
+
+          <li class="hover:text-red-500 cursor-pointer">
+            Categories
+          </li>
+        </ul>
+ 
+        <ul class="flex-roll hidden md:flex mt-[3rem] gap-[2rem] text-gray-500 lg:flex mt-[3rem] gap-[2rem] text-gray-500  mr-[8rem] text-[13px]" >
           <li class="hover:text-red-500 cursor-pointer">
             Home
           </li>
@@ -68,13 +96,13 @@
 
     <!-- The main body that contains the main-image and information -->
 
-    <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <main class=" grid grid-cols-1 lg:grid-cols-3 gap-8 ]">
         
-        <div class="lg:col-span-2 mt-[2rem]">
-          <img src="./assets/images/image-web-3-mobile.jpg" class="block md:hidden w-[70%] object-cover" alt="">
-        <img src="./assets/images/image-web-3-desktop.jpg" class="hidden md:block w-full object-cover lg:w-[97%]" alt="">
+        <div class="lg:col-span-2 mt-[2rem]  ">
+          <img src="./assets/images/image-web-3-mobile.jpg" class="block md:hidden w-full sm:w-2/3 md:w-1/2" object-cover" alt="">
+        <img src="./assets/images/image-web-3-desktop.jpg" class="hidden md:block ml-[5rem] w-full object-cover alt="">
 
-           <div class="lg:flex gap-[5rem] pt-[2rem] md:flex">
+           <div class="ml-[35px]   lg:flex gap-[5rem] pt-[2rem] lg:ml-[5rem] ">
             <h1 class="text-[30px] w-[40%] font-black  mt-[1rem] bg:text-[55px] font-black leading-[50px] mt-[1rem] md:text-[55px] font-black leading-[50px] mt-[1rem] lg:text-[35px] font-black leading-[50px] mt-[1rem]">
               The Bright Future of Web 3.0?
             </h1>
@@ -95,7 +123,7 @@
 
         <!-- The div on  the main right hand side -->
 
-        <div class="bg-black mt-[1rem] mr-[8rem] lg:mt-[2rem] ml-[-9px]">
+        <div class="   md:mx-[5rem] bg-black mt-[1rem] h-[500px] mt-[31px]">
           <h1 class="text-yellow-500 font-black text-[2rem] pt-[1rem] pl-[13px]">
             New 
           </h1>
@@ -138,9 +166,9 @@
     <!-- The last three(3) imagies at the bottom of the page -->
 
 
-    <div class="lg:flex mt-[3rem] justify-between md:flex mt-[3rem] justify-between ">
+    <div class="ml-[5rem]           md:flex mt-[3rem] justify-between ">
       <!-- First image- 01 -->
-      <div class="flex">
+      <div class="          md:flex ">
         <img src="./assets/images/image-retro-pcs.jpg" alt="" class="lg:h-[120px] md:h-[95px] h-[130px] ">
         <span class="lg:ml-[15px] md:ml-[15px] ml-[8px]">
           <p class="lg:text-[24px] text-red-500 font-black mt-[-6px] md:text-[24px] pt-[5px]">
@@ -156,7 +184,7 @@
       </div>
 
 
-      <div class="my-[8px] flex lg:flex md:flex">
+      <div class="      md:flex">
         <img src="./assets/images/image-top-laptops.jpg" alt="" class="lg:h-[120px] md:h-[95px] h-[130px]">
       <span class="lg:ml-[15px] md:ml-[15px] ml-[8px]">
           <p class="lg:text-[24px] text-red-500 font-black mt-[-6px] md:text-[24px] pt-[5px]">
@@ -172,7 +200,7 @@
       </div>
 
 
-      <div class="flex    lg:mr-[8rem]  md:[8rem] ">
+      <div class="      md:flex mr-[9rem] ">
         <img src="./assets/images/image-retro-pcs.jpg" alt="" class="lg:h-[120px]   md:h-[95px] h-[130px]">
         <span class="lg:ml-[15px] md:ml-[15px] ml-[8px]">
           <p class="lg:text-[24px] text-red-500 font-black mt-[-6px] md:text-[24px] pt-[5px]">
